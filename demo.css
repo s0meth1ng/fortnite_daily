@@ -1,0 +1,121 @@
+
+@font-face {
+    font-family: Fortnite;
+    src: url(fonts/BurbankBigCondensed-Bold.otf);
+}
+/*------------------------------------*\
+-------- Page Styles: Accordion
+\*------------------------------------*/
+html {
+    height: 100%;
+}
+
+body {
+	position:relative;
+	z-index:0;
+    height: 100%;
+    background-image: url("img/fbg.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.main:before {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:-1;
+/*
+	content:'';
+	background:-webkit-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-moz-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-o-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+*/
+}
+
+
+
+.site-header-wrap {
+	margin-bottom:60px;
+	border-bottom:1px solid #cd9ad6;
+}
+
+/*------------------------------------*\
+-------- accordion
+\*------------------------------------*/
+/*----- Accordion -----*/
+.accordion, .accordion * {
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion {
+	overflow:hidden;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:3px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    background-color: #151515;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+    text-decoration: none;
+	width:100%;
+	padding:15px;
+	display:inline-block;
+	border-bottom:1px solid #1a1a1a;
+	background: #313131;
+	transition:all linear 0.15s;
+	/* Type */
+    font-family: arial;
+    font-weight: bold;
+	font-size:1.200em;
+	text-shadow:0px 1px 0px #1a1a1a;
+	color:#fff;
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+	background:#4c4c4c;
+	/* Type */
+	text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	font-size: 18px;
+	display:none;
+}
+.week-title {
+    font-family: Fortnite;
+    font-size: 45px;
+    margin: 0;
+}
+
+
+.task-content {
+    font-weight: bold;
+}
+
+.hard::after {
+    content: "(TRUDNY)";
+    color: red;
+}
